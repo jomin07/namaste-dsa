@@ -3,4 +3,4 @@ function calculateSum(num1, num2) {
   console.log("Sum :", num1 + num2);
 }
 
-calculateSum(2, 3);
+calculateSum(2, 4);
