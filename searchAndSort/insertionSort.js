@@ -36,3 +36,30 @@ console.log(insertionSort([5, 3, 1, 6, 2]));
 // Worst Case: O(n2)Every element has to be compared and shifted back to the start.
 
 // Space Complexity: O(1) No extra array is used; sorting is done in-place.
+
+// Dry Run
+// Input: arr = [4, 5, 1, 3, 9]
+
+// i = 1 → curr = 5, prev = 0
+// arr[0] = 4 ≤ 5 → no shifting
+// Insert curr → [4, 5, 1, 3, 9]
+
+// i = 2 → curr = 1, prev = 1
+// arr[1] = 5 > 1 → shift → [4, 5, 5, 3, 9]
+// arr[0] = 4 > 1 → shift → [4, 4, 5, 3, 9]
+// prev = -1 → stop
+// Insert curr → [1, 4, 5, 3, 9]
+
+// i = 3 → curr = 3, prev = 2
+// arr[2] = 5 > 3 → shift → [1, 4, 5, 5, 9]
+// arr[1] = 4 > 3 → shift → [1, 4, 4, 5, 9]
+// arr[0] = 1 ≤ 3 → stop
+// Insert curr → [1, 3, 4, 5, 9]
+
+// i = 4 → curr = 9, prev = 3
+// arr[3] = 5 ≤ 9 → no shifting
+// Insert curr → [1, 3, 4, 5, 9]
+
+// Final Sorted Array: [1, 3, 4, 5, 9]
+
+// Output: [1, 3, 4, 5, 9]
