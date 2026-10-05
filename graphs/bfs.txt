@@ -1,0 +1,31 @@
+Breadth First Search (BFS)
+Example: 1
+
+BFS: [0, 1, 2, 3, 4]
+
+Example: 2
+
+BFS: [1, 2, 4, 3, 5, 9, 8, 6, 7]
+
+Real-World Example
+
+BFS: [Mussoorie, Dehradun, Chandigarh, , Delhi, Agra, Jaipur]
+
+This solution is also considered valid.
+
+BFS: [Mussoorie, Dehradun, Chandigarh, , Delhi, Jaipur, Agra]
+
+We implement Breadth-First Search (BFS) using a queue data structure
+
+
+Start by choosing a source node (the node from where you want to begin the traversal).
+Create a visited array or set to keep track of nodes you have already visited.
+Add the starting node to the queue and mark it as visited.
+While the queue is not empty:
+Remove (poll) one node from the front of the queue.
+Check all adjacent (neighbouring) nodes of this node.
+For each adjacent node:
+If it is not visited, then:
+Mark it as visited.
+Add it to the queue.
+Repeat this process until the queue becomes empty.

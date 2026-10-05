@@ -52,3 +52,104 @@ var combinationSum = function (arr, target) {
 
 // Space Complexity:
 // Space Complexity = O(2n * n) (output) + O(n) (stack)
+
+// Dry Run
+// Input: arr = [2, 3, 6, 7], target = 7
+
+// Step 0: Start Function combinationSum([2, 3, 6, 7], 7)
+
+// Initialize:
+// result = []
+// path = []
+
+// Call backtrack(7, [], 0)
+
+// Loop i = 0 → arr[0] = 2
+// path.push(2) → path = [2]
+// Call backtrack(5, [2], 0)
+
+//   Loop i = 0 → arr[0] = 2
+//   path.push(2) → path = [2, 2]
+//   Call backtrack(3, [2, 2], 0)
+
+//     Loop i = 0 → arr[0] = 2
+//     path.push(2) → path = [2, 2, 2]
+//     Call backtrack(1, [2, 2, 2], 0)
+//       remainingSum > 0 but next choice will exceed → return
+//     path.pop() → path = [2, 2]
+
+//     Loop i = 1 → arr[1] = 3
+//     path.push(3) → path = [2, 2, 3]
+//     Call backtrack(0, [2, 2, 3], 1)
+//       remainingSum == 0 → result.push([2, 2, 3])
+//     path.pop() → path = [2, 2]
+
+//   Loop ends
+//   path.pop() → path = [2]
+
+//   Loop i = 1 → arr[1] = 3
+//   path.push(3) → path = [2, 3]
+//   Call backtrack(2, [2, 3], 1)
+//     further exploration doesn’t hit 0 → backtrack
+//   path.pop() → path = [2]
+
+//   Loop i = 2 → arr[2] = 6
+//   path.push(6) → path = [2, 6]
+//   Call backtrack(-1, [2, 6], 2)
+//     remainingSum < 0 → return
+//   path.pop() → path = [2]
+
+//   Loop i = 3 → arr[3] = 7
+//   path.push(7) → path = [2, 7]
+//   Call backtrack(-2, [2, 7], 3)
+//     remainingSum < 0 → return
+//   path.pop() → path = [2]
+
+// Loop ends
+// path.pop() → path = []
+
+// Loop i = 1 → arr[1] = 3
+// path.push(3) → path = [3]
+// Call backtrack(4, [3], 1)
+
+//   Loop i = 1 → arr[1] = 3
+//   path.push(3) → path = [3, 3]
+//   Call backtrack(1, [3, 3], 1)
+//     no valid combination → return
+//   path.pop() → path = [3]
+
+//   Loop i = 2 → arr[2] = 6
+//   path.push(6) → path = [3, 6]
+//   Call backtrack(-2, [3, 6], 2)
+//     remainingSum < 0 → return
+//   path.pop() → path = [3]
+
+//   Loop i = 3 → arr[3] = 7
+//   path.push(7) → path = [3, 7]
+//   Call backtrack(-3, [3, 7], 3)
+//     remainingSum < 0 → return
+//   path.pop() → path = [3]
+
+// Loop ends
+// path.pop() → path = []
+
+// Loop i = 2 → arr[2] = 6
+// path.push(6) → path = [6]
+// Call backtrack(1, [6], 2)
+//   no valid combination → return
+// path.pop() → path = []
+
+// Loop i = 3 → arr[3] = 7
+// path.push(7) → path = [7]
+// Call backtrack(0, [7], 3)
+//   remainingSum == 0 → result.push([7])
+// path.pop() → path = []
+
+// Loop ends
+
+// Step 3: End
+// Return result = [[2, 2, 3], [7]]
+
+// Output: [[2, 2, 3], [7]]
+
+// Explanation: The backtracking algorithm explores all possible combinations by adding numbers repeatedly (reuse is allowed). Only the paths where the sum exactly equals target are stored in result.

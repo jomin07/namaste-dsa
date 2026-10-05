@@ -1,0 +1,27 @@
+Depth First Search (DFS)
+Example: 1
+
+DFS: [0, 1, 3, 2, 4]
+
+Example: 2
+
+DFS: [1, 4, 5, 6, 7, 3, 9, 8, 2]
+
+Another Possible Solution:
+
+DFS: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Real-World Example
+
+DFS: [Mussoorie, Dehradun, Delhi, Agra, Jaipur, Chandigarh]
+
+We implement Depth-First Search (DFS) using a Stack data structure
+
+
+Push the start node into the stack.
+Create a visited set to track visited nodes.
+While the stack is not empty:
+Pop the top node.
+If not visited → mark visited and process it.
+Push all unvisited neighbors into the stack.
+Repeat until the stack becomes empty.
