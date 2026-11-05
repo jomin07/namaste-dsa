@@ -1,0 +1,53 @@
+Floyd Warshall Algorithm
+All Pairs Shortest Path’s
+The Floyd Warshall Algorithm is a graph algorithm used to find the shortest distance between every pair of vertices (nodes) in a weighted graph. Unlike algorithms such as Dijkstra, which find the shortest path from a single source to all other vertices, Floyd Warshall computes the shortest paths between all possible pairs of vertices.
+The algorithm works for both directed and undirected weighted graphs. It can also handle negative edge weights, but it cannot be used if the graph contains a negative weight cycle because, in such cases, the shortest path is not well-defined.
+Find Shortest Paths ?
+
+Use Cases
+Shortest path (Between 4 to 2)
+
+4 → 2
+
+4 → 1 → 2
+
+4 → 3 → 2
+
+Shortest Path (Between 1 to 3)
+
+1 → 3
+
+1 → 2 → 3
+
+1 → 4 → 3
+
+Find Shortest Path Between i to j
+i → j where i and j any node’s.
+
+i → k → j where k is try all possible other nodes.
+
+Analyse the graph into 2D matrix
+
+
+
+s(i → j) = (i → k → j)
+
+k = 1
+
+
+dist[i][j] = Math.min((dist[i][k] + dist[k][j])) dist[i][j]
+
+
+k = 2
+
+
+
+k = 3
+
+
+
+k = 4
+
+
+At k=4, we find the shortest paths between all pairs of vertices using vertex 4 as an intermediate node.
+

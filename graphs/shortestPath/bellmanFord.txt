@@ -1,0 +1,23 @@
+Shortest Path – Bellman Ford Algorithm
+It handles negative edges.
+
+
+Relaxation is the process of trying to improve (reduce) the shortest distance to a vertex using an edge.
+
+How Relaxation Works?
+For an edge u → v with weight w:
+
+If distance[u] + w < distance[v]
+distance[v] = distance[u] + w
+
+Why relaxation is repeated in Bellman–Ford?
+Bellman–Ford relaxes all edges V−1 times.
+Because the longest possible shortest path can have at most V−1 edges.
+Each relaxation gradually propagates shorter paths across the graph.
+
+After the final iteration, if no values change, the process is stopped.
+
+The final answer is obtained in the last step.
+
+If your graph has a negative weight cycle, the Bellman–Ford algorithm fails.
+

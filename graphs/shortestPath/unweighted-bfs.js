@@ -127,14 +127,14 @@ function shortestPathParent(graph, src, dest) {
 // Pros: O(V + E) time and O(V) memory, the standard approach for large graphs.
 // Cons: two extra steps (store parents, then reconstruct and reverse).
 
-const graph = [
-  [1, 2], // 0
-  [3], // 1
-  [4], // 2
-  [5], // 3
-  [3], // 4
-  [], // 5
-];
+// const graph = [
+//   [1, 2], // 0
+//   [3], // 1
+//   [4], // 2
+//   [5], // 3
+//   [3], // 4
+//   [], // 5
+// ];
 
 console.log(shortestPathSimple(graph, 0, 5)); // [0, 1, 3, 5]
 console.log(shortestPathParent(graph, 0, 5)); // [0, 1, 3, 5]

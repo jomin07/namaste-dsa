@@ -1,0 +1,15 @@
+Dijkstra’s Algorithm
+Dijkstra’s Algorithm is used to find the shortest distance from a source node to all other nodes in a weighted graph where all edge weights are non-negative.
+
+
+You always move to the nearest unvisited node first.
+It uses a priority queue (min-heap) to efficiently pick the next node with the smallest distance.
+
+        
+            while:
+                PQ.pop
+                Check Stale value (ignore)
+                Exploring all neighbors
+                Update Distance (If required)
+                PQ.push
+        

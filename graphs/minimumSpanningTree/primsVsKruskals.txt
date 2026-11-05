@@ -1,0 +1,10 @@
+Comparison – Prim's vs Kruskal's Algorithm
+
+| Prim's Algorithm                  | Kruskal's Algorithm                |
+|-----------------------------------|------------------------------------|
+| Dense Graphs                      | Sparse Graphs                      |
+| Starts with a node                | Sorted list of edges               |
+| Priority Queue and Visited Array  | Union Find                         |
+| Time Complexity: O(E log V)       | Time Complexity: O(E log E)        |
+| Expands like Dijkstra's Algorithm | Greedy on Sorted edges             |
+| Adjacency List and Priority Queue | Edge List and Union Find           |

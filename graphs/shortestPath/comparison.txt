@@ -1,0 +1,11 @@
+Comparing all Shortest Path Graph Algorithms
+
+Practice Questions
+Which algorithm is suitable for the scenarios below?
+Unweighted Graph – BFS
+Weighted Graph Positive edges – Dijkstra's Algorithm
+Weighted Graph Negative edges – Bellman Ford Algorithm
+Shortest Path between every pair – Floyd Warshall Algorithm
+Need to find Negative weight cycle – Bellman Ford Algorithm
+Very large graph, fast real-time results – Dijkstra's Algorithm
+Small dense graph (matrix form) – Floyd Warshall Algorithm
